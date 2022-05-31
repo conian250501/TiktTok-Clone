@@ -1,0 +1,111 @@
+.wrapper {
+  --search-border-radius: 92px;
+  width: 100%;
+  height: var(--default-layout-header-height);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  width: var(--default-layout-width);
+}
+
+.search {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 361px;
+  height: 46px;
+  border: 1.5px solid transparent;
+  border-radius: var(--search-border-radius);
+  background-color: rgba(22, 24, 35, 0.06);
+  padding-left: 16px;
+}
+
+.search input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  color: var(--black);
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.search input:not(:placeholder-shown) ~ .search-btn {
+  color: rgba(22, 24, 35, 0.75);
+}
+
+.search::after {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: '';
+  height: 70%;
+  border-left: 2px solid #ccc;
+}
+
+.search:focus-within {
+  border-color: #a7a7ab;
+}
+
+.clear {
+  font-size: 1.4rem;
+  color: #a7a7ab;
+}
+
+.loading {
+  display: none;
+}
+
+.clear,
+.loading {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  right: 64px;
+}
+
+.search-btn {
+  width: 52px;
+  height: 100%;
+  font-size: 2rem;
+  color: #a7a7ab;
+  cursor: pointer;
+  border-top-right-radius: var(--search-border-radius);
+  border-bottom-right-radius: var(--search-border-radius);
+}
+
+.search-btn:hover {
+  background: rgba(22, 24, 35, 0.03);
+}
+
+.search-btn:active {
+  background-color: rgba(22, 24, 35, 0.06);
+}
+/*# sourceMappingURL=Header.module.css.map */
